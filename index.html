@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aplicação para Mentoria - Tráfego Pago</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0d0d0d;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .container {
+      max-width: 700px;
+      background-color: #1a1a1a;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #ff1a1a;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      font-weight: bold;
+      color: #ff4d4d;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      background-color: #262626;
+      border: 1px solid #ff1a1a;
+      border-radius: 6px;
+      color: #ffffff;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    input::placeholder, textarea::placeholder {
+      color: #bbbbbb;
+    }
+    button {
+      background-color: #ff1a1a;
+      color: #fff;
+      padding: 15px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: bold;
+      width: 100%;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: #cc0000;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 25px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Formulário de Aplicação</h1>
+    <form action="#" method="POST">
+      <label>Nome completo</label>
+      <input type="text" name="nome" required placeholder="Digite seu nome" />
+
+      <label>Instagram ou outra rede social</label>
+      <input type="text" name="instagram" required placeholder="@seuusuario" />
+
+      <label>WhatsApp com DDD</label>
+      <input type="tel" name="whatsapp" required placeholder="(00) 00000-0000" />
+
+      <label>Você já roda tráfego pago?</label>
+      <select name="experiencia" required>
+        <option value="">Selecione</option>
+        <option>Sim, direto nas plataformas</option>
+        <option>Não, mas já estudei bastante</option>
+        <option>Não tenho experiência</option>
+      </select>
+
+      <label>Plataforma principal</label>
+      <select name="plataforma" required>
+        <option value="">Selecione</option>
+        <option>Facebook Ads</option>
+        <option>Google Ads</option>
+        <option>Native (Taboola, Outbrain, etc)</option>
+        <option>TikTok Ads</option>
+        <option>Outra</option>
+      </select>
+
+      <label>CPC médio atual</label>
+      <input type="text" name="cpc" required placeholder="Ex: R$0,50" />
+
+      <label>CTR médio</label>
+      <input type="text" name="ctr" required placeholder="Ex: 2,5%" />
+
+      <label>Orçamento da campanha</label>
+      <select name="orcamento">
+        <option value="">Selecione</option>
+        <option>CBO</option>
+        <option>ABO</option>
+        <option>Ambos</option>
+      </select>
+
+      <label>ROAS mínimo aceitável</label>
+      <input type="text" name="roas" required placeholder="Ex: 2.0" />
+
+      <label>Ticket médio</label>
+      <input type="text" name="ticket" required placeholder="Ex: R$297" />
+
+      <label>Tipo de produto/serviço</label>
+      <select name="tipo">
+        <option value="">Selecione</option>
+        <option>Produto físico</option>
+        <option>Infoproduto próprio</option>
+        <option>PLR</option>
+        <option>Afiliado</option>
+        <option>Dropshipping</option>
+        <option>Agência / Serviço local</option>
+        <option>Outro</option>
+      </select>
+
+      <label>Investimento mensal em tráfego</label>
+      <select name="investimento">
+        <option value="">Selecione</option>
+        <option>Até R$1.000</option>
+        <option>R$1.000 a R$5.000</option>
+        <option>R$5.000 a R$20.000</option>
+        <option>Mais de R$20.000</option>
+      </select>
+
+      <label>Já rodou campanha blackhat?</label>
+      <select name="blackhat">
+        <option value="">Selecione</option>
+        <option>Sim, já rodei BH</option>
+        <option>Conheço, mas nunca fiz</option>
+        <option>Não manjo disso</option>
+      </select>
+
+      <label>Maior dificuldade hoje</label>
+      <textarea name="dificuldade" rows="4" required placeholder="Explique sua maior dor atual"></textarea>
+
+      <label>Consegue aplicar imediatamente?</label>
+      <select name="aplicar">
+        <option value="">Selecione</option>
+        <option>Sim, tô pronto</option>
+        <option>Preciso me organizar</option>
+        <option>Só quero entender mais primeiro</option>
+      </select>
+
+      <button type="submit">Enviar Aplicação</button>
+    </form>
+  </div>
+</body>
+</html>
