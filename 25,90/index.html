@@ -1,0 +1,986 @@
+<html><head><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8">
+
+
+
+<script src="js/latest.js" data-utmify-prevent-xcod-sck="" data-utmify-prevent-subids="" async="" defer=""></script>
+
+<script
+  src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+  data-utmify-prevent-xcod-sck
+  data-utmify-prevent-subids
+  async
+  defer
+></script>
+
+
+	<meta name="google" content="notranslate">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/jpg" href="images/vovo.jpg">
+	<title>Churrascaria Gaucha - Faça seu pedido!</title>
+	<meta name="description" content="Faça seu pedido online no Temperinho da Vó!">
+	<link type="text/css" href="css/delivry.css" rel="stylesheet">
+	<style type="text/css">
+		h1,
+		h2 {
+			color: #ff0000;
+		}
+
+		header#topo .cover {
+			background-color: #ff0000;
+		}
+
+		header#topo .info h1 {
+			color: #ff0000;
+		}
+
+		header#topo .info .icones a {
+			color: #ff0000;
+			border-color: #ff0000;
+		}
+
+		header#topo .cover .logo {
+			background: #ff0000;
+		}
+
+		header#topo #menuCategorias {
+			background: #ff0000;
+		}
+
+		header#topo .categorias a {
+			border-top-color: #ff0000;
+		}
+
+		footer {
+			background: #ff0000;
+		}
+
+		footer#carrinho .container .icone span {
+			color: #ff0000;
+		}
+
+		.btn,
+		a.voltar,
+		.btnSair,
+		.btnFidelidade,
+		.btnGoogle,
+		.btnEmail,
+		.btnSemCadastro {
+			background: #ff0000;
+		}
+
+		.qtdeProduto i:hover {
+			color: #ff0000;
+		}
+
+		.lista .item .col .nomeProduto {
+			color: #ff0000;
+		}
+
+		main#lista .produtos .item a:hover {
+			border: 2px solid #ff0000;
+		}
+
+		#pedido .entrega .radio label input[type=radio]:checked,
+		#pedido .entrega .radio label:hover {
+			background: #ff0000;
+		}
+
+		#pedido .pagamentos input[type=radio]:checked+label::before,
+		#detalhesProduto .info2 .opcoes input[type=checkbox]:checked+label::before,
+		#pedido .trocarPontos input[type=checkbox]:checked+label::before {
+			background-color: #ff0000;
+			border: 2px solid #ff0000;
+		}
+
+		.selecionado {
+			border: 2px solid #ff0000;
+		}
+
+		#meuCarrinho button.fechar,
+		#rastreamento .registro span.passou {
+			background: #ff0000;
+		}
+
+		span.estoque i {
+			color: #ff0000;
+		}
+	</style>
+	<meta name="theme-color" content="#ff0000">
+	<meta name="apple-mobile-web-app-capacity" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar" content="#ff0000">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#ff0000">
+	<meta name="apple-mobile-web-app-title" content="Temperinho da Vó">
+	<!-- SweetAlert2 -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+</head>
+
+<body>
+	<div id="opacidade" class="fechar"></div>
+	<div>
+		<div class="container containerFinalizar">
+			<a class="voltar" href="../home/index.html" title="Voltar"><i class="fa-solid fa-chevron-left"></i>
+				VOLTAR</a>
+			<div id="detalhesProduto">
+				<div class="info1">
+					<div class="somarAoPreco" style="display:none">s</div>
+					<div class="fotoProduto">
+						<figure>
+							<img src="images/marmita8.jpg" width="300px" height="300px" alt="Marmitex">
+						</figure>
+					</div>
+					<div class="descricao">
+						<h3>2 Marmitex Grande Com Strogonof </h3>
+						<span class="detalhe">9 Complementos Grátis</span>
+						de <span class="precoPromocao">R$ 39,80</span> por
+						<span class="preco">
+							R$ 25,90<span style="display:none;">25.90</span>
+						</span>
+						<span class="estoque"><i class="fa-solid fa-circle-down"></i> apenas 32 combos disponíveis</span>
+						<span></span>
+					</div>
+				</div>
+				<div class="info2">
+					<!-- <div id="escolha-seu-sabor" class="tipo" data-id="15312" data-calculo="n" data-minimo="1"
+						data-maximo="1" data-opcional="n">
+						<div class="topo">
+							<div>
+								<h3>Escolha Seu Sabor:</h3>
+								<span class="detalhe">
+									Escolha 1 opção </span>
+							</div>
+							<div class="col2">
+								<span class="escolhidos"><span>0</span>/1</span>
+								<span class="obrigatorio">OBRIGATÓRIO</span> <i class="fa-solid fa-circle-check"
+									style=""></i>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118801">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Açaí</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<span>
+									<input class="opcao" id="escolha-seu-sabor-acai" type="checkbox" name="opcao"
+										value="Açaí">
+									<label for="escolha-seu-sabor-acai"></label>
+								</span>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118800">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Frozen Tradicional</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<span>
+									<input class="opcao" id="escolha-seu-sabor-frozen-tradicional" type="checkbox"
+										name="opcao" value="Frozen Tradicional">
+									<label for="escolha-seu-sabor-frozen-tradicional"></label>
+								</span>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118803">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Açaí + Frozen Tradicional</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco">+ R$ 3,00<span style="display:none;">3.00</span></span>
+								</span>
+								<span>
+									<input class="opcao" id="escolha-seu-sabor-acai-frozen-tradicional" type="checkbox"
+										name="opcao" value="Açaí + Frozen Tradicional">
+									<label for="escolha-seu-sabor-acai-frozen-tradicional"></label>
+								</span>
+							</div>
+						</div>
+					</div> -->
+					<div id="complementos-gratis" class="tipo" data-id="15313" data-calculo="n" data-minimo="0" data-maximo="6" data-opcional="n">
+						<div class="topo">
+							<div>
+								<h3>Acompanhamentos:</h3>
+								<span class="detalhe">
+									Escolha até 6 opções </span>
+							</div>
+							<div class="col2">
+								<span class="escolhidos"><span>0</span>/6</span>
+								<i class="fa-solid fa-circle-check" style="display: inline"></i>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118806">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Arroz</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118812">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Arroz Integral</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118807">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Feijão em Caldo</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118813">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Feijão Tropeiro</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118815">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Tutu de Feijão </b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118814">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Pure de Batata</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118810">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Farofa ovos e bacon</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118818">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Macarrão Alho e Óleo</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="complementos-gratis" class="tipo" data-id="15313" data-calculo="n" data-minimo="0" data-maximo="1" data-opcional="n">
+						<div class="topo">
+							<div>
+    								<h3>Carne Adicional:</h3>
+								<span class="detalhe">
+									Escolha 1 opção - aprox 150g</span>
+							</div>
+							<div class="col2">
+								<span class="escolhidos"><span>0</span>/1</span>
+								<i class="fa-solid fa-circle-check" style="display: inline"></i>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118806">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Cupim</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118812">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Fraldinha</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118807">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>File ao Alho</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118813">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Contra File</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118815">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Calabresa 2 Unidades</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118814">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Medalhão de frango 5 Unidades</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="complementos-gratis" class="tipo" data-id="15313" data-calculo="n" data-minimo="0" data-maximo="4" data-opcional="n">
+						<div class="topo">
+							<div>
+								<h3>Salada:</h3>
+								<span class="detalhe">
+									Escolha até 4 opções </span>
+							</div>
+							<div class="col2">
+								<span class="escolhidos"><span>0</span>/4</span>
+								<i class="fa-solid fa-circle-check" style="display: inline"></i>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118806">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Vinagrete</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118812">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Maionese
+Batata c/ ovos</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118807">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Salpicão</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118813">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Legumes Cozido misto</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118815">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Alface</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118814">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Tomate</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118814">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Salada tropical</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118814">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Vagem c/ cenoura</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118814">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Pepino</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118814">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Brócolis c/ ovos de codorna</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118814">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Almeirão ao alho</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118814">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Beterraba ralada</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118814">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Repolho</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118814">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Pepino c/ rabanete</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118814">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Salada do Chef</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco"><span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="complementos-gratis" class="tipo" data-id="15313" data-calculo="n" data-minimo="0" data-maximo="1" data-opcional="n">
+						<div class="topo">
+							<div>
+								<h3>Turbine sua Marmita:</h3>
+								<span class="detalhe">
+									Escolha até 1 opção </span>
+							</div>
+							<div class="col2">
+								<span class="escolhidos"><span>0</span>/1</span>
+								<i class="fa-solid fa-circle-check" style="display: inline"></i>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118806">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Ovo Frito (1 un)</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco">Grátis no 1º pedido<span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118812">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Banana à Milanesa (1 un)</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco">Grátis no 1º pedido<span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118807">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Fricassê Frango (70g)</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco">Grátis no 1º pedido<span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118813">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Lasanha 4 queijo (70g) </b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco">Grátis no 1º pedido<span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118815">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Extra de Pure</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco">Grátis no 1º pedido<span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118814">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Coração de galinha (5 un) </b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco">Grátis no 1º pedido<span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118814">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Ovo de Codorna (3 un)</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco">Grátis no 1º pedido<span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled="">
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- <div id="turbine-seu-acai" class="tipo" data-id="15314" data-calculo="n" data-minimo="0"
+						data-maximo="0" data-opcional="n">
+						<div class="topo">
+							<div>
+								<h3>Turbine Seu Açaí:</h3>
+								<span class="detalhe">
+								</span>
+							</div>
+							<div class="col2">
+								<i class="fa-solid fa-circle-check" style="display: inline"></i>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118834">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Abacaxi</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco">+ R$ 2,00<span style="display:none;">0.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i
+											class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled>
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i
+											class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118840">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Amendoim</b>
+									<span class="detalheOpcao" style="padding-right:10px">20 gramas</span>
+									<span class="preco">+ R$ 2,00<span style="display:none;">2.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i
+											class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled>
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i
+											class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118835">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Banana</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco">+ R$ 2,00<span style="display:none;">2.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i
+											class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled>
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i
+											class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118828">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Baton Branco</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco">+ R$ 2,00<span style="display:none;">2.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i
+											class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled>
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i
+											class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118829">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Baton Preto</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco">+ R$ 2,00<span style="display:none;">2.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i
+											class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled>
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i
+											class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118824">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Bis Branco</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco">+ R$ 2,00<span style="display:none;">2.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i
+											class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled>
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i
+											class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118825">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Bis Preto</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco">+ R$ 2,00<span style="display:none;">2.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i
+											class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled>
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i
+											class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118841">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Chocobol</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco">+ R$ 2,00<span style="display:none;">2.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i
+											class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled>
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i
+											class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+						<div class="opcoes" data-id="118843">
+							<div class="desc" style="width: 100%; flex-direction: row; align-items: center;">
+								<span class="nome" style="">
+									<b>Coco</b>
+									<span class="detalheOpcao" style="padding-right:10px"></span>
+									<span class="preco">+ R$ 2,00<span style="display:none;">2.00</span></span>
+								</span>
+								<div class="qtdeProdutoOpcao">
+									<button class="removerQtdeOpcao" aria-label="Remover"><i
+											class="fa-solid fa-minus"></i></button>
+									<input class="qtdeOpcao" type="text" value="0" min="0" size="3" disabled>
+									<button class="adicionarQtdeOpcao" aria-label="Adicionar"><i
+											class="fa-solid fa-plus"></i></button>
+								</div>
+							</div>
+						</div>
+					</div> -->
+					<div class="overlay"></div>
+					<div class="imagem-ampliada">
+						<img src="#" alt="">
+						<button class="fechar"><i class="fa-solid fa-xmark"></i></button>
+					</div>
+					<label>Adicionar algum detalhe?</label>
+					<input class="observacao" type="text" name="observacao" placeholder="Escreva o detalhe aqui ..." maxlength="140">
+					<em><span>0</span>/140</em>
+				</div>
+				<div class="info3">
+					<input id="idProduto" type="hidden" name="idProduto" value="12111">
+					<!--<div class="qtdeProduto" style="display:none">-->
+					<div class="qtdeProduto" style="display: none;">
+						<button class="removerQtde" aria-label="Remover"><i class="fa-solid fa-minus"></i></button>
+						<input class="qtde" type="text" value="1" min="1" max="86" size="3" disabled="">
+						<button class="adicionarQtde" aria-label="Adicionar"><i class="fa-solid fa-plus"></i></button>
+					</div>
+					<div id="precoProduto">R$ 0,00</div>
+					<span class="precoProduto" style="display:none">14.00</span>
+					<button class="btn adicionarProduto" onclick="finalizar()">FINALIZAR PEDIDO</button>
+					<a href="https://checkout.viperpay.com.br/rtRfRLXr" id="finalizarPedido" style="display: none;"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/deliveryProduto.js"></script>
+
+	<script src="js/all.js" data-auto-replace-svg="nest" defer="" type="text/javascript"></script>
+	<script type="text/javascript" src="js/jquery-mask.js" defer=""></script>
+
+	<script src="js/sweetalert.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+	<script>
+		function finalizar() {
+			Swal.fire({
+				title: "Deseja que entregamos agora?",
+				showDenyButton: true,
+				showCancelButton: false,
+				allowOutsideClick: false,
+				icon: 'question',
+				confirmButtonText: "Sim, por favor!",
+				confirmButtonColor: "green",
+				denyButtonText: `Não, quero agendar a entrega!`,
+				focusConfirm: true,
+			}).then((result) => {
+				if (result.isConfirmed) {
+					location.href = $('a#finalizarPedido').attr('href');
+				} else if (result.isDenied) {
+					Swal.fire({
+						title: "Selecione o dia e a hora, por gentileza!",
+						text: 'Deixe seu pedido agendado e receba na hora combinada.',
+						confirmButtonText: "Agendar pedido!",
+						confirmButtonColor: "green",
+						showCancelButton: false,
+						allowOutsideClick: false,
+						input: "datetime-local",
+					}).then((result) => {
+						location.href = $('a#finalizarPedido').attr('href');
+					});
+				}
+			});
+		}
+	</script>
+
+
+</body></html>
